@@ -1,0 +1,10 @@
+**/node_modules
+.dockerignore
+.env
+.git
+.gitignore
+**/.vscode
+Dockerfile*
+*.yml
+*.yaml
+*.node_modules
