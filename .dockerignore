@@ -8,3 +8,4 @@ Dockerfile*
 *.yml
 *.yaml
 *.node_modules
+*.tsbuildinfo

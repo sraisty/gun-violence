@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    // "allowJs": true,
+    // "allowSyntheticDefaultImports": true,
+    // "checkJs": true,
+    // The following 3 lines are needed for lerna
+    "baseUrl": ".",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "downlevelIteration": true,
+    "sourceMap": true,
+    // end of what's required by lerna
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./build/",
+    "paths": {
+      "@gunviolence/frontend": ["apps/frontend/src"],
+      "@gunviolence/api": ["apps/api/src"],
+      "@gunviolence/*": ["apps/*/src"]
+    },
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    // "skipLibCheck": true,
+
+    // Typescript in "strict" mode doesn't recognize that defaultProps means
+    // that an optional prop will NEVER be undefined, so we can't set "strict" to true.
+    // See https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11640
+    // Trying strict: true.  Just avoid defaultProps.
+    "strict": true,
+    // "alwaysStrict": true,
+    // "noImplicitAny": true,
+    // "noImplicitThis": true,
+    // "strictBindCallApply": true,
+    // "strictFunctionTypes": true,
+    // "strictNullChecks": true,
+    // "strictPropertyInitialization": true,
+    "target": "esnext"
+  },
+  "exclude": ["node_modules", "coverage", "build"],
+  "files": [],
+  "include": ["./apps/**/src/*", "./packages/**/*src/*"],
+  // references are required by lerna
+  "references": [{ "path": "./apps/api/" }, { "path": "./apps/frontend" }]
+}

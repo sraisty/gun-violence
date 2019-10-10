@@ -1,0 +1,49 @@
+{
+  "name": "resilience-app",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "author": "Susan Raisty",
+  "license": "ISC",
+  "repository": "https://github.com/sraisty/gun-violence.git",
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "lint": "eslint 'apps/**/*.ts{,x}'",
+    "test": "jest",
+    "start": "lerna run start"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-typescript": "^7.6.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.2",
+    "@typescript-eslint/parser": "^2.3.2",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "lerna": "^3.16.5",
+    "prettier": "^1.18.2",
+    "@gun-violence/api": "file:apps/api",
+    "@gun-violence/frontend": "file:apps/frontend",
+    "test-usage": "file:apps/testUsage"
+  },
+  "dependencies": {},
+  "jest": {
+    "collectCoverageFrom": [
+      "{packages,apps,integration-tests}/**/*.{js,jsx,ts,tsx}",
+      "!**/coverage/**",
+      "!**/typings/**",
+      "!**/node_modules/**"
+    ],
+    "roots": [
+      "packages/",
+      "apps/",
+      "integration-tests"
+    ]
+  }
+}

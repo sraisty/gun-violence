@@ -1,14 +1,16 @@
 {
   "editor.rulers": [100],
+  "editor.formatOnSave": true,
   "eslint.autoFixOnSave": true,
   "eslint.validate": [
     { "language": "javascript", "autoFix": true },
     { "language": "javascriptreact", "autoFix": true },
     { "language": "typescript", "autoFix": true },
     { "language": "typescriptreact", "autoFix": true }
-  ],
+  ]
   "eslint.workingDirectories": [
-    { "directory": "./frontend", "changeProcessCWD": true },
-    { "directory": "./gql_server", "changeProcessCWD": true }
+    { "directory": "./apps/frontend", "changeProcessCWD": true },
+    { "directory": "./apps/api", "changeProcessCWD": true }
+  //   { "directory": "./apps/database", "changeProcessCWD": true }
   ]
 }

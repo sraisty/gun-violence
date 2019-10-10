@@ -1,0 +1,95 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "jest", "prettier"],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "reportUnusedDisableDirectives": true,
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.ts", "**/*.test.tsx", "src/setupTests.ts"] }
+    ],
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/href-no-hash": "off", // soon-to-be deprecated
+    "jsx-a11y/label-has-for": "off", // soon-to-be deprecated
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".jsx", ".tsx"] }],
+    "max-len": [
+      "warn",
+      {
+        "code": 100,
+        "tabWidth": 2,
+        "comments": 100,
+        "ignoreComments": false,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "prettier/prettier": "error",
+    "no-extra-boolean-cast": "off", // turning off allows casting to boolean: if(!!myCallback)
+    "react/prop-types": "off", // needed for typescript
+    "react/destructuring-assignment": "warn", // our tests & common components do this a lot
+    "react/jsx-props-no-spreading": "off", // our tests & common components do lots of prop spreading
+    "react/static-property-placement": [
+      // allow defaultProps as static class property inside component
+      "error",
+      "static public field"
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off", // our tests & common components do this a lot
+    "@typescript-eslint/no-explicit-any": "warn" // our tests & common components do this a lot
+  },
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx", ".json"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+      },
+      "eslint-import-resolver-lerna": {
+        "packages": "apps"
+      }
+    },
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": "webpack*.js",
+      "parser": "babel-eslint",
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
+}
