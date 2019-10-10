@@ -8,9 +8,10 @@
     { "language": "typescript", "autoFix": true },
     { "language": "typescriptreact", "autoFix": true }
   ]
-  "eslint.workingDirectories": [
-    { "directory": "./apps/frontend", "changeProcessCWD": true },
-    { "directory": "./apps/api", "changeProcessCWD": true }
-  //   { "directory": "./apps/database", "changeProcessCWD": true }
-  ]
+  // "eslint.nodePath": "./node_modules",
+  // "eslint.workingDirectories": [
+  //   { "directory": "./apps/frontend", "changeProcessCWD": true },
+  //   { "directory": "./apps/api", "changeProcessCWD": true },
+  //   { "directory": "./packages/integration-tests", "changeProcessCWD": true }
+  // ]
 }

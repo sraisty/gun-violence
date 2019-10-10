@@ -28,14 +28,14 @@
   },
   "reportUnusedDisableDirectives": true,
   "rules": {
-    "import/no-extraneous-dependencies": [
-      "error",
-      { "devDependencies": ["**/*.test.ts", "**/*.test.tsx", "src/setupTests.ts"] }
-    ],
-    "jsx-a11y/click-events-have-key-events": "warn",
-    "jsx-a11y/href-no-hash": "off", // soon-to-be deprecated
-    "jsx-a11y/label-has-for": "off", // soon-to-be deprecated
-    "jsx-a11y/no-static-element-interactions": "warn",
+    // "import/no-extraneous-dependencies": [
+    //   "error",
+    //   { "devDependencies": ["**/*.test.ts", "**/*.test.tsx", "src/setupTests.ts"] }
+    // ],
+    // "jsx-a11y/click-events-have-key-events": "warn",
+    // "jsx-a11y/href-no-hash": "off", // soon-to-be deprecated
+    // "jsx-a11y/label-has-for": "off", // soon-to-be deprecated
+    // "jsx-a11y/no-static-element-interactions": "warn",
     "react/jsx-filename-extension": ["warn", { "extensions": [".jsx", ".tsx"] }],
     "max-len": [
       "warn",
